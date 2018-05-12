@@ -304,7 +304,6 @@ class Notifications {
     if ($this->comment)
       $this->ci->db->where("{$this->notificationTable}.comment", $this->comment);
     if ($this->userId) {
-      $this->ci->db->where("{$this->notificationTable}.user_id", $this->userId);
       $this->ci->db->where("{$this->notificationUserTable}.user_id", $this->userId);
     }
     if ($this->only_unread)
